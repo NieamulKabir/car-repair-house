@@ -27,7 +27,7 @@ const Header = () => {
                             <li><Link  to='/contact'>Contact</Link></li>
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-xl">Car Repair</Link>
+                    <Link to='/' className="btn btn-ghost normal-case text-xl"><span className='text-orange-900 text-3xl pr-2'><i class="fa-solid fa-car-side"></i></span> Repair</Link>
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal mx-2 px-6">
@@ -36,7 +36,7 @@ const Header = () => {
                             <NavLink className={{bgColor:'white'}} to="/home"
                                 style={({ isActive }) =>
                                     isActive ? activeStyle : undefined
-                                }>HOME
+                                }> <span className='text-2xl'><i class="fa-solid fa-house-chimney"></i></span>
                             </NavLink>
                         </li>
 
@@ -78,7 +78,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-                <div className='ml-16 lg:ml-0 mr-6'>
+                <div className='ml-24 md:ml-80  lg:ml-0 lg:mr-6'>
                     <Link className="btn">LOG IN</Link>
                 </div>
             </div>

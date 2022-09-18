@@ -39,14 +39,14 @@ const Carousel = () => {
                     "clickable": true
                 }} navigation={true} className="mySwiper">
                     <SwiperSlide>
-                        <img className='w-full h-[300px] lg:h-[500px] object-cover' src={slide1} alt="" />
+                        <img className='w-full h-[300px] lg:h-[550px] object-cover' src={slide1} alt="" />
 
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-full h-[300px] lg:h-[500px] object-cover' src={slide2} alt="" />
+                        <img className='w-full h-[300px] lg:h-[550px] object-cover' src={slide2} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-full h-[300px] lg:h-[500px] object-cover' src={slide3} alt="" />
+                        <img className='w-full h-[300px] lg:h-[550px] object-cover' src={slide3} alt="" />
                     </SwiperSlide>
 
                 </Swiper>

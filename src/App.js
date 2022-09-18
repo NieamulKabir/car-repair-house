@@ -7,6 +7,7 @@ import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
 import Services from './Pages/Services/Services';
 import Team from './Pages/Team/Team';
+import Contact from './Pages/Contact/Contact';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer></Footer>
     </div>
