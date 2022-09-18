@@ -20,11 +20,11 @@ const Header = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><Link>Home</Link></li>
-                            <li><Link>About</Link></li>
-                            <li><Link>Service</Link></li>
-                            <li><Link>Team</Link></li>
-                            <li><Link>Contact</Link></li>
+                            <li><Link to='/home'>Home</Link></li>
+                            <li><Link  to='/services'>Service</Link></li>
+                            <li><Link  to='/about'>About</Link></li>
+                            <li><Link  to='/team'>Team</Link></li>
+                            <li><Link  to='/contact'>Contact</Link></li>
                         </ul>
                     </div>
                     <Link to='/' className="btn btn-ghost normal-case text-xl">Car Repair</Link>
@@ -79,7 +79,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className='ml-16 lg:ml-0 mr-6'>
-                    <Link className="btn">Get started</Link>
+                    <Link className="btn">LOG IN</Link>
                 </div>
             </div>
         </div>

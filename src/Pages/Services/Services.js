@@ -7,7 +7,7 @@ const Services = () => {
     return (
         <div>
             <div>
-                <img src="https://nieamulkabir.github.io/repairdata/img/slider/slider1.jpg" alt="" />
+                <img className='w-full h-[250px] md:h-[500px]' src="https://nieamulkabir.github.io/repairdata/img/slider/slider1.jpg" alt="" />
             </div>
             <div className='bg-orange-100 font-serif'>
                 <div className='mx-10 py-16'>

@@ -7,7 +7,7 @@ const About = () => {
         <div>
             <div className=' font-serif'>
                 <div>
-                    <img src="https://nieamulkabir.github.io/repairdata/img/about.jpg" alt="" />
+                    <img className='mx-auto w-full h-[250px] md:h-[500px]' src="https://nieamulkabir.github.io/repairdata/img/about.jpg" alt="" />
                 </div>
                 <h1 className='text-3xl font-bold text-violet-500 pt-10 pb-4'>ABOUT US</h1>
                 <div className='bg-orange-100 pb-14'>
