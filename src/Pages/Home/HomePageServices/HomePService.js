@@ -10,7 +10,7 @@ const HomePService = (props) => {
                 <figure><img className='w-full' src={img} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="text-xl font-semibold">{name}</h2>
-                    <p>{description.slice(0,60)}...</p>
+                    <p>{description.slice(0,80)}...</p>
                     <p className='font-semibold'><span>Charge : </span> <span className='text-orange-600'>${price}</span></p>
                     <div className="card-actions justify-end">
                         <button className="px-4 py-2  font-semibold text-white rounded hover:bg-gray-500 transition duration-300 bg-violet-500">Buy Now</button>

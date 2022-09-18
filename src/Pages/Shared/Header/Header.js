@@ -79,8 +79,11 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className='ml-24 md:ml-80  lg:ml-0 lg:mr-6'>
-                    <Link className="btn">LOG IN</Link>
+                    <Link to='/login' className="btn">LOG IN</Link>
                 </div>
+                {/* <div className='ml-24 md:ml-80  lg:ml-0 lg:mr-6'>
+                    <Link to='/register' className="btn">SIGNUP</Link>
+                </div> */}
             </div>
         </div>
 

@@ -8,6 +8,8 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Services from './Pages/Services/Services';
 import Team from './Pages/Team/Team';
 import Contact from './Pages/Contact/Contact';
+import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Login/Register/Register';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer></Footer>
     </div>
