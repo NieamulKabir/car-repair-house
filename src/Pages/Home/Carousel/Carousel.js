@@ -29,7 +29,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const Carousel = () => {
     return (
-        <div className=''>
+        <div className='mb-10'>
            
             <div className=''>
                 <Swiper spaceBetween={30} centeredSlides={true} autoplay={{

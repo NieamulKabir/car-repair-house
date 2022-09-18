@@ -5,7 +5,7 @@ const CoreValue = () => {
 
         <div className='font-serif'>
 
-            <div className='mx-10 py-20 '>
+            <div className='mx-10 pb-20 pt-10 '>
                 <div className='mb-10'>
                     <h1 className='text-3xl font-bold text-purple-500'>Our Core Values</h1>
                     <p className='text-purple-500'>Repair House Is on of the trusted and reputable company .Which is helps you and repair your carr efficient cost</p>
