@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Service = (props) => {
-    const { name, price, img, description } = props.service;
+const Service = ({service}) => {
+    const { name, price, img, title,id } = service;
+    const navigate = useNavigate();
+
+    const navigateToServiceDetail = id =>{
+        navigate(`/serviceDetails/${id}`);
+    }
+
     return (
         <div>
 
@@ -10,11 +17,13 @@ const Service = (props) => {
                 <figure><img className='w-full' src={img} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="text-xl font-semibold">{name}</h2>
-                    <p>{description.slice(0, 80)}...</p>
+                    <h2 className="text-xl font-semibold">{id}</h2>
+                    <p>{title.slice(0, 80)}...</p>
                     <p className='font-semibold'><span>Charge : </span> <span className='text-orange-600'>${price}</span></p>
                     <div className="card-actions justify-end">
                         <button className="px-4 py-2  font-semibold text-white rounded hover:bg-gray-500 transition duration-300 bg-violet-500">Book Now</button>
-                        <button className="px-4 py-2  font-semibold text-white rounded hover:bg-gray-500 transition duration-300 bg-violet-500">Details</button>
+
+                        <button onClick={() => navigateToServiceDetail(id)} className="px-4 py-2  font-semibold text-white rounded hover:bg-gray-500 transition duration-300 bg-violet-500">Details</button>
                     </div>
                 </div>
             </div>

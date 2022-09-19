@@ -1,5 +1,8 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 
 let activeStyle = {
@@ -11,6 +14,11 @@ let activeStyle = {
 
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+
+    const handleSignOut = () => {
+        signOut(auth);
+    }
     return (
         <div className=' bg-orange-100 font-serif'>
             <div className="navbar w-11/12 mx-auto">
@@ -21,10 +29,10 @@ const Header = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/home'>Home</Link></li>
-                            <li><Link  to='/services'>Service</Link></li>
-                            <li><Link  to='/about'>About</Link></li>
-                            <li><Link  to='/team'>Team</Link></li>
-                            <li><Link  to='/contact'>Contact</Link></li>
+                            <li><Link to='/services'>Service</Link></li>
+                            <li><Link to='/about'>About</Link></li>
+                            <li><Link to='/team'>Team</Link></li>
+                            <li><Link to='/contact'>Contact</Link></li>
                         </ul>
                     </div>
                     <Link to='/' className="btn btn-ghost normal-case text-xl"><span className='text-orange-900 text-3xl pr-2'><i class="fa-solid fa-car-side"></i></span> Repair</Link>
@@ -33,14 +41,14 @@ const Header = () => {
                     <ul className="menu menu-horizontal mx-2 px-6">
 
                         <li className="px-2 font-semibold">
-                            <NavLink className={{bgColor:'white'}} to="/home"
+                            <NavLink className={{ bgColor: 'white' }} to="/home"
                                 style={({ isActive }) =>
                                     isActive ? activeStyle : undefined
                                 }> <span className='text-2xl'><i class="fa-solid fa-house-chimney"></i></span>
                             </NavLink>
                         </li>
 
-                        <li className= "px-2 font-semibold">
+                        <li className="px-2 font-semibold">
                             <NavLink to="/services"
                                 style={({ isActive }) =>
                                     isActive ? activeStyle : undefined
@@ -48,7 +56,7 @@ const Header = () => {
                             </NavLink>
                         </li>
 
-                        <li className= "px-2 font-semibold">
+                        <li className="px-2 font-semibold">
                             <NavLink to="/about"
                                 style={({ isActive }) =>
                                     isActive ? activeStyle : undefined
@@ -58,7 +66,7 @@ const Header = () => {
 
 
 
-                        <li className= "px-2 font-semibold">
+                        <li className="px-2 font-semibold">
                             <NavLink to="/team"
                                 style={({ isActive }) =>
                                     isActive ? activeStyle : undefined
@@ -67,7 +75,7 @@ const Header = () => {
                                 TEAM
                             </NavLink>
                         </li>
-                        <li className= "px-2 font-semibold">
+                        <li className="px-2 font-semibold">
                             <NavLink to="/contact"
                                 style={({ isActive }) =>
                                     isActive ? activeStyle : undefined
@@ -78,12 +86,21 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-                <div className='ml-24 md:ml-80  lg:ml-0 lg:mr-6'>
-                    <Link to='/login' className="btn">LOG IN</Link>
-                </div>
-                {/* <div className='ml-24 md:ml-80  lg:ml-0 lg:mr-6'>
-                    <Link to='/register' className="btn">SIGNUP</Link>
-                </div> */}
+                {
+                    user ?
+                        <button className='' onClick={handleSignOut}>
+                            <div className='ml-16 md:ml-80  lg:ml-0 lg:mr-6'>
+                                <Link className="btn w-34 md:w-36">Sign Out</Link>
+                            </div>
+                        </button>
+
+                        :
+                        <div className='ml-24 md:ml-80  lg:ml-0 lg:mr-6'>
+                            <Link to='/login' className="btn">LOG IN</Link>
+                        </div>
+                }
+
+
             </div>
         </div>
 

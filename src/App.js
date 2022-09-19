@@ -10,6 +10,8 @@ import Team from './Pages/Team/Team';
 import Contact from './Pages/Contact/Contact';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import ServiceDetails from './Pages/ServiceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -19,6 +21,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/serviceDetails/:serviceId" element={
+          <RequireAuth>
+            <ServiceDetails />
+          </RequireAuth>
+        } />
+
         <Route path="/about" element={<About />} />
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
