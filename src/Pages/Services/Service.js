@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const Service = ({service}) => {
     const { name, price, img, title,id } = service;
     const navigate = useNavigate();
@@ -11,13 +12,11 @@ const Service = ({service}) => {
 
     return (
         <div>
-
-
+            
             <div className="card card-compact bg-base-100 shadow-xl">
                 <figure><img className='w-full' src={img} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="text-xl font-semibold">{name}</h2>
-                    <h2 className="text-xl font-semibold">{id}</h2>
                     <p>{title.slice(0, 80)}...</p>
                     <p className='font-semibold'><span>Charge : </span> <span className='text-orange-600'>${price}</span></p>
                     <div className="card-actions justify-end">

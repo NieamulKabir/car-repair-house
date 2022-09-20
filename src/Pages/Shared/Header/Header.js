@@ -35,7 +35,12 @@ const Header = () => {
                             <li><Link to='/contact'>Contact</Link></li>
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-xl"><span className='text-orange-900 text-3xl pr-2'><i class="fa-solid fa-car-side"></i></span> Repair</Link>
+
+                    <Link to='/' className="btn btn-ghost normal-case text-base md:text-xl ml-[-30px]">
+                        <span className='text-orange-900 text-lg md:text-3xl'><i class="fa-solid fa-car-side"></i></span>
+                        Repair
+                    </Link>
+
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal mx-2 px-6">
@@ -86,21 +91,33 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-                {
-                    user ?
-                        <button className='' onClick={handleSignOut}>
-                            <div className='ml-16 md:ml-80  lg:ml-0 lg:mr-6'>
-                                <Link className="btn w-34 md:w-36">Sign Out</Link>
-                            </div>
-                        </button>
+                <ul>
+                    <li className="px-0">
+                        {
+                            user?.displayName && <h3 className="text-xs md:text-lg font-semibold">{user?.displayName}</h3>
+                        }
+                    </li>
+                    <li className='md:px-2'>
+                        {user?.displayName && <img className="w-10 md:w-36 rounded-xl" src={user?.photoURL} alt="" />}
+                    </li>
+                    <li>
+                        {
+                            user ?
+                                <button onClick={handleSignOut}>
+                                    <div className='md:ml-80  lg:ml-0 lg:mr-6'>
+                                        <Link to='/register' className="btn md:w-36 "><span className='text-xs md:text-lg'>SIGN OUT</span></Link>
+                                    </div>
+                                </button>
 
-                        :
-                        <div className='ml-24 md:ml-80  lg:ml-0 lg:mr-6'>
-                            <Link to='/login' className="btn">LOG IN</Link>
-                        </div>
-                }
+                                :
+                                <div className='ml-24 md:ml-80  lg:ml-0 lg:mr-6'>
+                                    <Link to='/login' className="btn w-36">LOG IN</Link>
+                                </div>
+                        }
 
 
+                    </li>
+                </ul>
             </div>
         </div>
 
