@@ -72,12 +72,12 @@ const Login = () => {
                         <div className="form-control w-5/6 md:w-2/3 mx-auto ">
                             <label className="label">
                                 <span className="label-text text-black font-semibold">
-                                   <span><i class="fa-solid fa-envelope"></i></span> Email</span>
+                                   <span><i className="fa-solid fa-envelope"></i></span> Email</span>
                             </label>
                             <input required ref={emailRef} type="email" placeholder="Type your email" className="input text-gray-900 text-lg" />
                             <label className="label">
                                 <span className="label-text  text-black font-semibold">
-                                   <span><i class="fa-sharp fa-solid fa-key"></i> </span> Password</span>
+                                   <span><i className="fa-sharp fa-solid fa-key"></i> </span> Password</span>
                             </label>
                             <input required ref={passwordRef} type="password" placeholder="Type your password" className="input text-gray-900 text-lg" />
                             <br />

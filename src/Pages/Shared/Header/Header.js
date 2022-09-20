@@ -37,7 +37,7 @@ const Header = () => {
                     </div>
 
                     <Link to='/' className="btn btn-ghost normal-case text-base md:text-xl ml-[-30px]">
-                        <span className='text-orange-900 text-lg md:text-3xl'><i class="fa-solid fa-car-side"></i></span>
+                        <span className='text-orange-900 text-lg md:text-3xl'><i className="fa-solid fa-car-side"></i></span>
                         Repair
                     </Link>
 
@@ -49,7 +49,7 @@ const Header = () => {
                             <NavLink className={{ bgColor: 'white' }} to="/home"
                                 style={({ isActive }) =>
                                     isActive ? activeStyle : undefined
-                                }> <span className='text-2xl'><i class="fa-solid fa-house-chimney"></i></span>
+                                }> <span className='text-2xl'><i className="fa-solid fa-house-chimney"></i></span>
                             </NavLink>
                         </li>
 
@@ -98,13 +98,13 @@ const Header = () => {
                         }
                     </li>
                     <li className='md:px-2'>
-                        {user?.displayName && <img className="w-10 md:w-36 rounded-xl" src={user?.photoURL} alt="" />}
+                        {user?.displayName && <img className="w-10 lg:w-36 rounded-xl" src={user?.photoURL} alt="" />}
                     </li>
                     <li>
                         {
                             user ?
                                 <button onClick={handleSignOut}>
-                                    <div className='md:ml-80  lg:ml-0 lg:mr-6'>
+                                    <div className='md:ml-5'>
                                         <Link to='/register' className="btn md:w-36 "><span className='text-xs md:text-lg'>SIGN OUT</span></Link>
                                     </div>
                                 </button>
