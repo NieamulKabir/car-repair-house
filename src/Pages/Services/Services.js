@@ -1,9 +1,15 @@
 import React from 'react';
 import useServices from '../../hooks/useServices';
 import Service from './Service';
+import Loading from '../../Loading/Loading';
 
 const Services = () => {
     const [services] = useServices();
+
+    if(services.length === 0){
+        return <Loading></Loading>
+        
+    }
     return (
         <div>
             <div>

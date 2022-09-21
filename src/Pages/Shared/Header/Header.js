@@ -1,7 +1,10 @@
+import { async } from '@firebase/util';
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
 
 
@@ -17,7 +20,10 @@ const Header = () => {
     const [user] = useAuthState(auth);
 
     const handleSignOut = () => {
-        signOut(auth);
+        signOut(auth)
+            .then(() => {
+                toast('Sign-out successful')
+            })
     }
     return (
         <div className=' bg-orange-100 font-serif'>

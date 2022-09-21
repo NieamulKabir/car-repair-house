@@ -1,10 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import useServices from '../../../hooks/useServices';
+import Loading from '../../../Loading/Loading';
 import HomePService from './HomePService';
 
 const HomePServices = () => {
     const [services] = useServices();
+
+    if(services.length===0){
+        return <Loading></Loading>
+    }
     return (
         <div className='bg-orange-100 font-serif'>
             <div className='mx-10 py-16'>
