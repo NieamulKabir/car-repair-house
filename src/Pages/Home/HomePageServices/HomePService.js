@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Zoom  } from 'react-reveal';
 
 const HomePService = (props) => {
     const{name,price,img,title,id}=props.service;
@@ -10,6 +11,7 @@ const HomePService = (props) => {
     }
     return (
         <div>
+            <Zoom left>
             <div className="card card-compact bg-base-100 shadow-xl">
                 <figure><img className='w-full' src={img} alt="Shoes" /></figure>
                 <div className="card-body">
@@ -22,6 +24,8 @@ const HomePService = (props) => {
                     </div>
                 </div>
             </div>
+            </Zoom>
+       
             
         </div>
     );
