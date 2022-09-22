@@ -98,13 +98,13 @@ const Header = () => {
                     </ul>
                 </div>
                 
-                    <li className="px-0">
+                    <li className="pr-2">
                         {
-                            user?.displayName && <h3 className="text-xs md:text-lg font-semibold">{user?.displayName}</h3>
+                            user?.displayName && <h3 className="text-xs md:text-lg font-semibold md:w-36">{user?.displayName}</h3>
                         }
                     </li>
                     <li className='md:px-2'>
-                        {user?.displayName && <img className="w-10 lg:w-36 rounded-xl" src={user?.photoURL} alt="" />}
+                        {user?.displayName && <img className="w-10 lg:w-[80px] rounded-3xl" src={user?.photoURL} alt="" />}
                     </li>
                     <li>
                         {
