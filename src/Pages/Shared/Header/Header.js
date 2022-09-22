@@ -48,7 +48,7 @@ const Header = () => {
                     </Link>
 
                 </div>
-                <div className="navbar-end hidden lg:flex">
+                <div className="navbar-justify hidden lg:flex">
                     <ul className="menu menu-horizontal mx-2 px-6">
 
                         <li className="px-2 font-semibold">
@@ -97,7 +97,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-                <ul>
+                
                     <li className="px-0">
                         {
                             user?.displayName && <h3 className="text-xs md:text-lg font-semibold">{user?.displayName}</h3>
@@ -123,7 +123,7 @@ const Header = () => {
 
 
                     </li>
-                </ul>
+                
             </div>
         </div>
 

@@ -1,8 +1,10 @@
 import React from 'react';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const Contact = () => {
     return (
         <div className='bg-orange-50 font-serif'>
+            <PageTitle title="Contact"></PageTitle>
             <h1 className="pt-5 pb-10 text-center text-3xl font-bold text-violet-800">CONTACT US</h1>
             <section className="text-gray-400 bg-gray-900 body-font relative">
                 <div className="absolute inset-0 bg-gray-900">

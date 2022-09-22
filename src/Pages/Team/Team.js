@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const Team = () => {
     const [team, setTeam] = useState([]);
@@ -8,8 +9,10 @@ const Team = () => {
             .then(data => setTeam(data))
     }, [])
     return (
+        
         <div className='font-serif bg-orange-100 pb-16'>
-            <img className='w-full w-full h-[250px] md:h-[500px] mx-auto' src="https://nieamulkabir.github.io/repairdata/img/team.jpg" alt="" />
+            <PageTitle title="Team"></PageTitle>
+            <img className='w-full h-[250px] md:h-[500px] mx-auto' src="https://nieamulkabir.github.io/repairdata/img/team.jpg" alt="" />
             <h1 className='text-3xl font-bold text-violet-500 py-10'>OUR TEAM</h1>
             <div className='w-8/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-7'>
                 {

@@ -1,10 +1,12 @@
 import React from 'react';
 import CoreValue from '../Home/OurCoreValue/CoreValue';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 import './About.css'
 
 const About = () => {
     return (
         <div>
+          <PageTitle title="About"></PageTitle>
             <div className=' font-serif'>
                 {/* banner img  */}
                 <div>

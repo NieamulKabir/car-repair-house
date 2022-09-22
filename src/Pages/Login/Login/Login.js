@@ -6,6 +6,7 @@ import Loading from '../../../Loading/Loading';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import OtherAccount from '../OtherAccountLogIn/OtherAccount';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Login = () => {
 
@@ -63,12 +64,13 @@ const Login = () => {
 
     return (
         <div className=' py-5 mb-20 font-serif'>
+            <PageTitle title="Log In"></PageTitle>
             <h2 className="text-3xl py-10 font-bold text-violet-500">Please Login</h2>
-            <div className='md:flex justify-center mx-auto'>
-                <div className='mx-auto md:mx-0'>
-                    <img src="https://asitive.com/wp-content/uploads/2022/06/istockphoto-1281150061-612x612-1.jpg" alt="" />
+            <div className='md:flex w-11/12 justify-center mx-auto'>
+                <div className='mx-auto md:mx-0 md:w-[45%] lg:w-1/2'>
+                    <img className='' src="https://asitive.com/wp-content/uploads/2022/06/istockphoto-1281150061-612x612-1.jpg" alt="" />
                 </div>
-                <div className="w-5/6 md:w-1/2 lg:w-1/3 py-16 mx-auto md:mx-0 bg-orange-100 rounded-box ">
+                <div className="w-5/6 md:w-[55%] lg:w-1/3 py-16 mx-auto md:mx-0 bg-orange-100 rounded-box ">
                     <form onSubmit={handleSubmit}>
                         <div className="form-control w-5/6 md:w-2/3 mx-auto ">
                             <label className="label">

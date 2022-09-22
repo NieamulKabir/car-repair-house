@@ -2,6 +2,7 @@ import React from 'react';
 import useServices from '../../hooks/useServices';
 import Service from './Service';
 import Loading from '../../Loading/Loading';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const Services = () => {
     const [services] = useServices();
@@ -12,6 +13,7 @@ const Services = () => {
     }
     return (
         <div>
+            <PageTitle title="Service"></PageTitle>
             <div>
                 <img className='w-full md:h-[500px]' src="https://nieamulkabir.github.io/repairdata/img/slider/slider1.jpg" alt="" />
             </div>
