@@ -86,7 +86,7 @@ const Header = () => {
                                 TEAM
                             </NavLink>
                         </li>
-                        <li className="px-2 font-semibold">
+                        <li className=" font-semibold">
                             <NavLink to="/contact"
                                 style={({ isActive }) =>
                                     isActive ? activeStyle : undefined
@@ -97,33 +97,36 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-                
-                    <li className="pr-2">
-                        {
-                            user?.displayName && <h3 className="text-xs md:text-lg font-semibold md:w-36">{user?.displayName}</h3>
-                        }
-                    </li>
-                    <li className='md:px-2'>
-                        {user?.displayName && <img className="w-10 lg:w-[80px] rounded-3xl" src={user?.photoURL} alt="" />}
-                    </li>
-                    <li>
-                        {
-                            user ?
-                                <button onClick={handleSignOut}>
-                                    <div className='md:ml-5'>
-                                        <Link to='/register' className="btn md:w-36 "><span className='text-xs md:text-lg'>SIGN OUT</span></Link>
-                                    </div>
-                                </button>
 
-                                :
-                                <div className='ml-24 md:ml-80  lg:ml-0 lg:mr-6'>
-                                    <Link to='/login' className="btn w-36">LOG IN</Link>
+                <li className="pr-2 ml-0 pl-0">
+                    {
+                        user?.displayName &&
+                        <div className='flex justify-center items-center'>
+                            <h3 className="text-xs md:text-lg font-semibold md:w-[200px] ml-0 text-violet-700">{user?.displayName}  </h3>
+                            <img className="rounded-3xl w-10" src={user?.photoURL} alt="" />
+                        </div>
+
+                    }
+                </li>
+
+                <li>
+                    {
+                        user ?
+                            <button onClick={handleSignOut}>
+                                <div className='md:ml-5'>
+                                    <Link to='/register' className="btn md:w-36 "><span className='text-xs md:text-lg'>SIGN OUT</span></Link>
                                 </div>
-                        }
+                            </button>
+
+                            :
+                            <div className='ml-24 md:ml-80  lg:ml-0 lg:mr-6'>
+                                <Link to='/login' className="btn w-36">LOG IN</Link>
+                            </div>
+                    }
 
 
-                    </li>
-                
+                </li>
+
             </div>
         </div>
 
