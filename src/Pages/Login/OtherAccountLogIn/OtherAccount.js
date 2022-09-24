@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../../Loading/Loading';
 
@@ -26,17 +27,25 @@ const OtherAccount = () => {
         <div>
             {errorElement}
             <button
-                onClick={() => signInWithGoogle()}
+                onClick={async () => {
+                    await signInWithGoogle();
+                    toast('Successfully log in With Google')
+                }}
                 className=" btn bg-gray-50 hover:bg-gray-200 text-gray-500 border-none">
                 <i className="fab fa-google text-xl text-violet-500 pr-2"></i>
                 SignIn With Google
             </button>
+            <ToastContainer></ToastContainer>
             <button
-                onClick={() => signInWithGithub()}
+                onClick={async () => {
+                    await signInWithGithub();
+                    toast('Successfully log in With GitHub')
+                }}
                 className="mt-2 btn bg-gray-50 hover:bg-gray-200 text-gray-500 border-none">
                 <i className="fa-brands fa-github text-xl text-violet-500 pr-2"></i>
                 SignIn With Github
             </button>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

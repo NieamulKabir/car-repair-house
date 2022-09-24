@@ -39,11 +39,12 @@ const Login = () => {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
 
-    const handleSubmit = e => {
+    const handleSubmit =async e => {
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        signInWithEmailAndPassword(email, password)
+        await signInWithEmailAndPassword(email, password)
+        toast("Successfully Login")
     }
 
     // const navigateRegister = event => {

@@ -1,9 +1,9 @@
-import { async } from '@firebase/util';
+
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
 
@@ -21,9 +21,7 @@ const Header = () => {
 
     const handleSignOut = () => {
         signOut(auth)
-            .then(() => {
-                toast('Sign-out successful')
-            })
+
     }
     return (
         <div className=' bg-orange-100 font-serif'>
@@ -112,11 +110,19 @@ const Header = () => {
                 <li>
                     {
                         user ?
-                            <button onClick={handleSignOut}>
+                            <button
+                                onClick={async () => {
+                                    await handleSignOut();
+                                    toast("Successfully Sign Out");
+                                }
+
+                                }>
+
                                 <div className='md:ml-5'>
                                     <Link to='/register' className="btn md:w-36 "><span className='text-xs md:text-lg'>SIGN OUT</span></Link>
                                 </div>
                             </button>
+
 
                             :
                             <div className='ml-24 md:ml-80  lg:ml-0 lg:mr-6'>
@@ -124,7 +130,7 @@ const Header = () => {
                             </div>
                     }
 
-
+                    <ToastContainer></ToastContainer>
                 </li>
 
             </div>
