@@ -40,7 +40,7 @@ const Register = () => {
             <PageTitle title="Register"></PageTitle>
             <h2 className="text-3xl py-10 font-bold text-violet-500" >Please Register</h2>
 
-            <div className='md:flex justify-center mx-auto'>
+            <div className='md:flex md:px-6 justify-center items-center mx-auto'>
                 <div className='md:w-1/2 mx-auto md:mx-0'>
                     <img className='w-4/5 mx-auto' src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7865.jpg?w=2000" alt="" />
                 </div>

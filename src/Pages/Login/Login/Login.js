@@ -66,7 +66,7 @@ const Login = () => {
         <div className=' py-5 mb-20 font-serif'>
             <PageTitle title="Log In"></PageTitle>
             <h2 className="text-3xl py-10 font-bold text-violet-500">Please Login</h2>
-            <div className='md:flex w-11/12 justify-center mx-auto'>
+            <div className='md:flex  md:px-6 w-11/12 justify-center items-center mx-auto'>
                 <div className='mx-auto md:mx-0 md:w-[45%] lg:w-1/2'>
                     <img className='' src="https://asitive.com/wp-content/uploads/2022/06/istockphoto-1281150061-612x612-1.jpg" alt="" />
                 </div>
